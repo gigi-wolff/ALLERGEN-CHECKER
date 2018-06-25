@@ -14,7 +14,7 @@
   padding: 0;
   position: relative;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.6rem;
   font-weight: bold;
   height: 75px; /* panel-body height + panel-heading height = panel-height */
 }
@@ -41,7 +41,7 @@
 }
 
 .panel-title {
-  font: 1em;
+  font-size: 1rem;
 }
 
 .allergen-actions {
@@ -54,11 +54,6 @@
 .panel-body {
   height: 225px; /* panel-body height + panel-heading height = panel-height */
   overflow-y:auto;
-}
-
-#allergens-title, .center-heading {
-  color: #a94442;
-  font-size: 3em;
 }
 
 #substance {
@@ -77,7 +72,4 @@
     float: left;
   }
 
-  .panel-title {
-    font: .75rem;
-  }
 }
