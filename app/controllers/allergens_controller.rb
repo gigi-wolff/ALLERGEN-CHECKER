@@ -2,9 +2,6 @@ class AllergensController < ApplicationController
   # Use before_action to set up an instance variable for an action, 
   # in this case, call set_allergen before calling edit or destroy
   before_action :set_allergen, only: [:edit, :destroy]
-  # Use after_action to check all products in db for allergens if a new
-  # allergen has been created or an existing allergen has been updated
-  after_action :check_all_products_for_allergens, only: [:create, :update]
 
 # run 'rails routes' then add '_path' to the Prefix to get the url
 
@@ -105,12 +102,6 @@ class AllergensController < ApplicationController
     # require top level key be allergen and allow changes to category, substances
     params.require(:allergen).permit(:category, :substances)
     # To permit all attributes params.require(:post).permit!
-  end
-
-  def check_all_products_for_allergens
-    Product.pluck(:id).each do |product_id| 
-      check_for_allergens(product_id)
-    end 
   end
 
 end

@@ -4,10 +4,6 @@ class ProductsController < ApplicationController
   # before_action :set_product, only: [:edit, :update, :show, :destroy]
   before_action :set_product, only: [:edit, :update, :show, :destroy]
 
-  # Use after_action to check if product contains allergens after its been created or 
-  # updated
-  after_action :product_check, only: [:create, :update]
-
 # run 'rails routes' then add '_path' to the Prefix to get the url
 
 
@@ -102,19 +98,6 @@ class ProductsController < ApplicationController
     # require top level key be product and allow changes to name, ingredients
     params.require(:product).permit(:name, :ingredients)
     # To permit all attributes params.require(:post).permit!
-  end
-
-  def unique_product_name?
-    product_name = params[:product][:name]
-    if Product.exists?(name: product_name )
-      return false
-    else
-      return true
-    end
-  end
-
-  def product_check
-    check_for_allergens(@product.id)
   end
 
 end
