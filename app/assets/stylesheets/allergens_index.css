@@ -1,0 +1,83 @@
+.panel-wrapper {
+  margin: auto;
+}
+
+.panel {
+  display: block;
+  height: 300px; /* panel-body height + panel-heading height = panel-height */
+  width: 30%;
+  margin-left: 2%;
+  float: left;
+}
+
+#custom-panel-heading {
+  padding: 0;
+  position: relative;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 75px; /* panel-body height + panel-heading height = panel-height */
+}
+
+.panel-btn {
+    white-space: normal;
+    background-color: #f2dede;
+    height: 75px;
+    width: 100%;
+}
+
+#panel-dropdown {
+  position: absolute;
+  min-width: auto;
+  padding: 10px 10px;
+  text-align: center;
+  margin-left: 40%;
+  margin-top: -5%;
+}
+
+#edit-trash-icons {
+  float: left;
+  color: #337ab7;
+}
+
+.panel-title {
+  font: 1em;
+}
+
+.allergen-actions {
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  text-align: center;
+}
+
+.panel-body {
+  height: 225px; /* panel-body height + panel-heading height = panel-height */
+  overflow-y:auto;
+}
+
+#allergens-title, .center-heading {
+  color: #a94442;
+  font-size: 3em;
+}
+
+#substance {
+  display: block;
+  text-align: center;
+  color: #C70039;
+  padding-left: 5px;
+  padding-right: 5px;
+  letter-spacing: -1px;
+}
+/*------------------*/
+@media (max-width: 768px) {
+
+  .panel {  
+    width: 40%;
+    float: left;
+  }
+
+  .panel-title {
+    font: .75rem;
+  }
+}

@@ -1,0 +1,46 @@
+$navbar-default-bg:   #8FBC8F;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*@import url("/Users/Gigi/whitespace-reset.css");*/
+* {
+  box-sizing: border-box;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #07056A;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#link-desc {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.center-heading {
+  text-align: center;
+  font-size: 1.7em;
+  color: #07056A;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+  clear: left;
+}
+
+.color-ok {
+  color: green;
+}
+
+.color-not-ok {
+  color: #a94442;
+  font-weight: bold;
+}
+
+
