@@ -1,7 +1,8 @@
-$navbar-default-bg:   #8FBC8F;
+$navbar-default-bg: #708290; /* color or navbar */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-/*@import url("/Users/Gigi/whitespace-reset.css");*/
+@import url("whitespace-reset.css");
+
 * {
   box-sizing: border-box;
 }
@@ -9,21 +10,28 @@ $navbar-default-bg:   #8FBC8F;
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #07056A;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
+  background: transparent url(background-logo.jpg) 100% 100% no-repeat;
 }
 
-#link-desc {
+#link-desc > a {
   font-size: 1.3em;
   font-weight: bold;
+  color: white;
+}
+
+#link-desc a:hover {
+  cursor: pointer;
+  background-color: #8297a8;
 }
 
 .center-heading {
   text-align: center;
   font-size: 1.7em;
-  color: #07056A;
+  color: #00334d;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -34,13 +42,5 @@ $navbar-default-bg:   #8FBC8F;
   clear: left;
 }
 
-.color-ok {
-  color: green;
-}
-
-.color-not-ok {
-  color: #a94442;
-  font-weight: bold;
-}
 
 

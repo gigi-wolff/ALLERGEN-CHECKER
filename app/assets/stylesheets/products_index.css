@@ -6,3 +6,23 @@ table {
   background-color: #FFFF99;
   color: #a94442;
 }
+
+.color-ok {
+  color: green;
+}
+
+.color-not-ok {
+  color: #800000;
+}
+
+table, th, tr {
+    border: 1px solid #9fbfdf;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf2f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #d9e6f2;
+}

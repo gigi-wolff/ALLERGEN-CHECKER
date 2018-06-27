@@ -8,45 +8,47 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- <a class="navbar-brand" id="logo" href="#">Allergen-Check</a> -->
       <%= link_to "Allergen-Checker", root_path, class: "navbar-brand", id:"logo" %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- <ul class="nav navbar-nav"> -->
-        <!-- <li><a href="#">Link</a></li> -->
-        <!--  
-        <li id="link-desc"><%= link_to "Allergens", root_path %></li>
-        <li id="link-desc"><%= link_to "Add Allergen", new_allergen_path %></li>
-        <li id="link-desc"><%= link_to "Products", products_path %></li>
-        <li id="link-desc"><%= link_to "Add Product", new_product_path %></li>
-        -->
-      <!-- </ul> -->
-
+      <ul class="nav navbar-nav">
+        <li id="link-desc"><%= link_to "List All Allergens", root_path %></li>
+        <li id="link-desc"><%= link_to "Add an Allergen", new_allergen_path %></li>
+        <li id="link-desc"><%= link_to "List All Products", products_path %></li>
+        <li id="link-desc"><%= link_to "Add a Product", new_product_path %></li>
+      </ul>
+<!--  Search -->
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Product Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+<!--  End Search -->
       
-        <!-- Single button -->
-          <div class="btn-group">
-            <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Allergens <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="/allergens">View all Allergens</a></li>
-              <li><a href="/allergens/new">Add an Allergen</a></li>
-            </ul>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Products <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="/products">View all Products</a></li>
-              <li><a href="/products/new">Add a Product</a></li>
-            </ul>
-          </div>
-
+<!-- Single button dropdown-->
+<!--  
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Allergens <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/allergens">View all Allergens</a></li>
+          <li><a href="/allergens/new">Add an Allergen</a></li>
+        </ul>
       </div>
-
-
+      <div class="btn-group">
+        <button type="button" class="btn btn-info btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/products">View all Products</a></li>
+          <li><a href="/products/new">Add a Product</a></li>
+        </ul>
+      </div>
+-->
+<!-- End Single button dropdown-->
 
 
 

@@ -1,13 +1,22 @@
+body {
+  background-image: url("background-1.jpeg");
+  background-size:auto 100% no-repeat;
+  /* background-color and background-blend-mode impact opacity */
+  background-color: rgba(255, 255, 255, .85) !important;
+  background-blend-mode: color;
+}
+
 .panel-wrapper {
   margin: auto;
 }
 
-.panel {
+#custom-panel {
   display: block;
   height: 300px; /* panel-body height + panel-heading height = panel-height */
   width: 30%;
   margin-left: 2%;
   float: left;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
 #custom-panel-heading {
@@ -21,9 +30,9 @@
 
 .panel-btn {
     white-space: normal;
-    background-color: #f2dede;
     height: 75px;
     width: 100%;
+    background-color: #c8d7e4;
 }
 
 #panel-dropdown {
@@ -54,12 +63,12 @@
 .panel-body {
   height: 225px; /* panel-body height + panel-heading height = panel-height */
   overflow-y:auto;
+  background-color: #e4edf5;
 }
 
 #substance {
   display: block;
   text-align: center;
-  color: #C70039;
   padding-left: 5px;
   padding-right: 5px;
   letter-spacing: -1px;
