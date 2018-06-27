@@ -1,4 +1,4 @@
-<div class="well col-xs-8 col-xs-offset-2">
+<!-- <div class="well col-xs-8 col-xs-offset-2"> -->
   <h3 class="center-heading"><strong><u><%= @product.name %></u></strong></h3>
   <hr>
   <table class="size-chars">
@@ -12,15 +12,15 @@
       <!-- ingredient does not cause reaction -->
       <% if causes_reaction.empty? %>
         <tr>
-          <td class="add-padding color-ok"><%= current_ingredient %></td>
+          <td class="add-padding color-ok custom-td"><%= current_ingredient %></td>
         </tr>
       <!-- ingredient causes reaction -->
       <% else %>
         <tr>
-          <td class="add-padding color-not-ok">
+          <td class="add-padding color-not-ok custom-td">
             <%= current_ingredient %>
           </td>
-          <td class="add-padding color-not-ok">
+          <td class="add-padding color-not-ok custom-td">
             <div class="alert alert-danger" role="alert">
               <h6 class="center"><strong><u><%= current_ingredient %> Allergens</u></strong></h6>
               <!-- display allergen category and substances which match ingredient -->
@@ -57,4 +57,4 @@
       class: "btn btn-lg btn-danger" %>
     <%= link_to "View all products", products_path, class: "btn btn-lg btn-success" %>
   </div>
-</div>
+<!-- </div> -->

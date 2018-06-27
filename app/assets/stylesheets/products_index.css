@@ -1,7 +1,3 @@
-table {
-  margin:auto;
-}
-
 .mark {
   background-color: #FFFF99;
   color: #a94442;
@@ -16,7 +12,8 @@ table {
 }
 
 table, th, tr {
-    border: 1px solid #9fbfdf;
+  margin: auto;
+  border: 1px solid #9fbfdf;
 }
 
 tr:nth-child(even) {
