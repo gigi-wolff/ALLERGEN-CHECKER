@@ -1,0 +1,19 @@
+#search-panel {
+  display: block;
+  height: 300px;
+  width: 30%;
+  margin-left: 2%;
+  margin: 20px auto;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+#search-panel-heading {
+  padding: 0;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 75px;
+  height: 75px; /* panel-body height + panel-heading height = panel-height */
+  background-color: #c8d7e4;
+}

@@ -14,17 +14,30 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li id="link-desc"><%= link_to "List All Allergens", root_path %></li>
-        <li id="link-desc"><%= link_to "Add an Allergen", new_allergen_path %></li>
         <li id="link-desc"><%= link_to "List All Products", products_path %></li>
+        <li id="link-desc"><%= link_to "Add an Allergen", new_allergen_path %></li>
         <li id="link-desc"><%= link_to "Add a Product", new_product_path %></li>
       </ul>
 <!--  Search -->
+      <%= form_tag(search_lookup_path, :method => "get",   
+          class: 'navbar-form navbar-right') do %>  
+        <div class="input-group">  
+          <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+          <div class="input-group-btn">  
+            <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+          </div>  
+        </div>  
+      <% end %>
+
+
+<!-- 
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Product Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+-->
 <!--  End Search -->
       
 <!-- Single button dropdown-->

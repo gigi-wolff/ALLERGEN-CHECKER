@@ -1,39 +1,11 @@
 <body>
+  <% all_allergens = Allergen.all %>
+
+
   <h1 class="center-heading"><strong>Allergens</strong></h1>
   <div class="panel-wrapper">
-    <% Allergen.find_each do |specific_allergen| %>
-      <% category = specific_allergen.category %>
-      <% substances = specific_allergen.substances.split(";") %>
-      <div id="custom-panel" class="panel">
-        <div id="custom-panel-heading" class="panel-heading">
-          <div class="dropdown">
-            <button class="panel-btn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenu1"aria-haspopup="true" aria-expanded="true">
-              <div class="color-not-ok"><%= category %>
-                <span class="caret"></span>
-              </div>
-            </button>
-            <ul id="panel-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li>
-                <span id="edit-trash-icons"><%= link_to "Edit", edit_allergen_path(category)%>
-                <i class="glyphicon glyphicon-pencil"></i></span>
-              </li>
-              <br>
-              <li>
-                <span id="edit-trash-icons">
-                <%= link_to "Delete", allergen_path(category), method: :delete, data: { confirm: "Are you sure you want to delete this Allergen?"}%><i class="glyphicon glyphicon-trash"></i></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="panel-body">
-          <% substances.each do |substance| %>
-            <div id="substance" class="color-not-ok">
-              <%= substance %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+    <% all_allergens = Allergen.all %>
+    <%= render 'shared/allergen_panels', obj: all_allergens %>
   </div>
   <br>
   <div class="center">

@@ -1,0 +1,27 @@
+  <h1 class="center-heading"><strong>Search Results:  <%= @search_item %></strong></h1>
+  <% if @search_item.blank? %>
+    <div class="panel-danger">
+      <div class="panel-heading">
+        <h1 class="panel-title center">
+          Empty Search Field
+        </h1>
+      </div>
+    </div>
+  <% else %>
+    <% allergen_search_results = search_all_allergens(@search_item) %>
+    <% product_search_results = search_all_products(@search_item) %>
+    <% if !product_search_results.empty? %>
+        <%= render 'shared/products_table', obj: product_search_results %>
+    <% end %>
+    <% if !allergen_search_results.empty? %>
+        <%= render 'shared/allergen_panels', obj: allergen_search_results %>
+    <% end %>
+    <!-- Search item not found in Product and Allergen db -->
+    <% if allergen_search_results.empty? && product_search_results.empty? %>
+      <div class="panel-info">
+        <div class="panel-heading">
+          <h1 class="panel-title center"><%= @search_item %> Not Found</h1>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
