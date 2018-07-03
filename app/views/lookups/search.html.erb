@@ -16,11 +16,11 @@
         <th>Product</th>
         <th class='center'>Ingredients</th>
       </tr>
-      <%= render partial: "shared/product", collection: product_search_results, :locals => {index_view: false}  %>
+      <%= render partial: "shared/product", collection: product_search_results, :locals => {:index_view => false}  %>
       </table>
     <% end %>
     <% unless allergen_search_results.nil? %>
-      <%= render partial: "shared/allergen", collection: allergen_search_results, :locals => {index_view: false}  %>
+      <%= render partial: "shared/allergen", collection: allergen_search_results, :locals => {index_view: false, search_item: @search_item}  %>
     <% end %>
 
     <!-- Search item not found in Product and Allergen db -->
