@@ -11,10 +11,16 @@
     <% allergen_search_results = search_all_allergens(@search_item) %>
     <% product_search_results = search_all_products(@search_item) %>
     <% unless product_search_results.nil? %>
-      <%= render 'shared/products_table', obj: product_search_results %>
+      <table class="table">
+      <tr colspan="2">
+        <th>Product</th>
+        <th class='center'>Ingredients</th>
+      </tr>
+      <%= render partial: "shared/product", collection: product_search_results, :locals => {index_view: false}  %>
+      </table>
     <% end %>
     <% unless allergen_search_results.nil? %>
-        <%= render 'shared/allergen_panels', obj: allergen_search_results %>
+      <%= render partial: "shared/allergen", collection: allergen_search_results, :locals => {index_view: false}  %>
     <% end %>
 
     <!-- Search item not found in Product and Allergen db -->
