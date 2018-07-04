@@ -27,7 +27,7 @@
           <%= substance %>
         <!-- if invoked from search, display on search match substances in category -->
         <% elsif substance.upcase.include?(search_item.upcase)%> 
-          <%= substance %>
+          <%= highlight(substance, search_item) %>
         <% end %>
       </div> 
     <% end %>

@@ -16,7 +16,7 @@
         <th>Product</th>
         <th class='center'>Ingredients</th>
       </tr>
-      <%= render partial: "shared/product", collection: product_search_results, :locals => {:index_view => false}  %>
+      <%= render partial: "shared/product", collection: product_search_results, :locals => {:index_view => false, search_item: @search_item}  %>
       </table>
     <% end %>
     <% unless allergen_search_results.nil? %>
