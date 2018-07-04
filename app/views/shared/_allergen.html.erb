@@ -4,8 +4,8 @@
     <div class="panel-title">
       <!-- Split button -->
       <div class="btn-group">
-        <button type="button" id="index-panel-button" class="btn btn-primary"><%= allergen.category %></button>
         <% if index_view %>
+          <button type="button" id="index-panel-button" class="btn btn-primary"><%= allergen.category %></button>
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="caret"></span>
             <span class="sr-only">Toggle Dropdown</span>
@@ -14,6 +14,10 @@
             <li><%= link_to "Edit   ", edit_allergen_path(allergen.category)%></li>
             <li><%= link_to "Delete   ", allergen_path(allergen.category), method: :delete, data: { confirm: "Are you sure you want to delete this Allergen?"}%></li>
           </ul>
+        <% else %>
+          <div id = "search_view">
+            <button type="button" id="index-panel-button" class="btn btn-primary"><%= allergen.category %></button>
+        </div>
         <% end %>
       </div>
       <!--  -->

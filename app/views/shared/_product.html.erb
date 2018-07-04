@@ -1,6 +1,10 @@
 <% product_reactions = Reaction.where("product_id = ?", product.id) %>
 <!-- for debugging... < % debug =1/0 % >  -->
-<tr>
+  <% if index_view %>
+    <tr>
+  <% else %>
+    <tr id="search_view">
+  <% end %>
   <% if product_reactions.empty? %> <!-- product contains no allergens -->
     <td class="text-color-ok"><%= product.name %></td>
     <td class="text-color-ok"><%= product.ingredients %></td>
