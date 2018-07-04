@@ -12,8 +12,9 @@ tr:nth-child(odd) {
     background-color: #d9e6f2;
 }
 
-tr:hover {
-  background-color: white;
+/* does not apply to first row */
+tr:not(:first-child):hover{
+  border: 5px solid #7e97b1
 }
 
 .mark {
