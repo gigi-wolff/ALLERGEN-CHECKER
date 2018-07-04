@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :products
   resources :allergens
-  #/search is the route to your search page and lookups#search means your search.html.erb is located in the view folder named lookups
-  get '/search' => 'lookups#search', as: 'search_lookup'
+  #/search is the route to your search page and searches#search means your search.html.erb is located in the view folder named searches
+  get '/search' => 'searches#search', as: 'search_search'
   root 'allergens#index'
 
   #When we use resources routes, we are mapping the browser 

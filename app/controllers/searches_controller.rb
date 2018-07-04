@@ -1,4 +1,4 @@
-class LookupsController < ApplicationController
+class SearchesController < ApplicationController
   before_action :set_search_item
 
   def search
