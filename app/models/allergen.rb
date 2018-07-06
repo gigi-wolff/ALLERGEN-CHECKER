@@ -9,6 +9,10 @@ class Allergen < ApplicationRecord
   # After allergen has been created or update (and saved) check all products for
   # this allergen
   after_save do |allergen|
-    check_all_products_for_allergens    
+    # make sure there are products in db
+    if Product.any?
+      Product.pluck(:id).each {|product_id| check_for_allergens(product_id)
+    end
   end
+
 end
